@@ -13,7 +13,7 @@ var friends = ["paul", "mike", "leo"];
 friends.push ("daz");
 //will put daz into the array at the end, no arguement needed
 friends.pop ()
-//removes the last item from the array 
+//removes the last item from the array
 
 //unshift
 var friends = ["paul", "mike", "leo"];
@@ -25,11 +25,18 @@ var friends = ["paul", "mike", "leo"];
 friends.shift ();
 //removes index 0 from array
 
-//indexOf 
+//indexOf
 //this will find in an item is in the array
 var colors = ["red", "green", "blue", "white"];
 colors.indexOf ("blue"); // 2
 colors.indexOf ("red"); // 0
+
+var john = ['john', 'smith', '1990', 'designer', false];
+if(john.indexOf('teacher') === -1) {
+  console.log('john is NOT a teacher');
+}
+// if the element 'teacher' is not in the array it returns -1;
+//
 
 //slice
 //this removes items in the array
@@ -55,7 +62,7 @@ for(var i = 0; i < colors.length; i++) {
 }
 //this prints each array item to the console/ works to show comments on a post every time one is added etc
 
-//forEach 
+//forEach
 //js built in way to iterating over an array
 var colors = ["red", "green", "blue", "white"];
 colors.forEach(function (placeHolder) {
@@ -67,7 +74,7 @@ colors.forEach(function (placeHolder) {
 
 /*function printReverse(arr) {
     for(var i = arr.length -1; i >=0; i--) {
-     console.log(arr[i]);   
+     console.log(arr[i]);
     }
 }
 

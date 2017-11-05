@@ -1,6 +1,6 @@
 ///////////////////////////////////////
 // Lecture: variables
-/*
+
 var name = 'John';
 console.log(name);
 
@@ -12,13 +12,13 @@ console.log(age);
 
 var fullAge = true;
 console.log(fullAge);
-*/
+
 
 
 
 ///////////////////////////////////////
 // Lecture: variables 2
-/*
+
 var name = 'John';
 var age = 26;
 
@@ -44,13 +44,13 @@ console.log(name + ' is a ' + age + ' years old ' + job + '. Is he married? ' + 
 //console.log(lastName);
 
 alert(name + ' is a ' + age + ' years old ' + job + '. Is he married? ' + isMarried + '.');
-*/
+
 
 
 
 ///////////////////////////////////////
 // Lecture: operators
-/*
+
 var now = 2016;
 var birthYear = now - 26;
 
@@ -73,13 +73,13 @@ ageMark = ageMark * 2;
 
 console.log(ageJohn);
 console.log(ageMark);
-*/
+
 
 
 
 ///////////////////////////////////////
 // Lecture: if/else statements
-/*
+
 var name = 'John';
 var age = 26;
 var isMarried = 'yes';
@@ -105,13 +105,13 @@ if(isMarried) {
 if (23 === "23") {
     console.log('Something to print...');
 }
-*/
+
 
 
 
 ///////////////////////////////////////
 // Lecture: boolean logic and switch
-/*
+
 var age = 20;
 
 if (age < 20) {
@@ -140,7 +140,7 @@ switch (job) {
     default:
         console.log('John does something else.');
 }
-*/
+
 
 
 
@@ -196,7 +196,7 @@ if (scoreJohn > scoreMike && scoreJohn > scoreMary) {
 ///////////////////////////////////////
 // Lecture: Functions
 
-/*
+
 function calculateAge(yearOfBirth) {
     var age = 2016 - yearOfBirth;
     return age;
@@ -210,7 +210,7 @@ var ageMary = calculateAge(1948);
 function yearsUntilRetirement(name, year) {
     var age = calculateAge(year);
     var retirement = 65 - age;
-    
+
     if (retirement >= 0) {
         console.log(name + ' retires in ' + retirement + ' years.');
     } else {
@@ -222,13 +222,13 @@ function yearsUntilRetirement(name, year) {
 yearsUntilRetirement('John', 1990);
 yearsUntilRetirement('Mike', 1969);
 yearsUntilRetirement('Mary', 1948);
-*/
+
 
 
 
 ///////////////////////////////////////
 // Lecture: Statements and expressions
-/*
+
 function someFun(par) {
     //code
 }
@@ -245,13 +245,13 @@ var x = 3;
 if (x === 5) {
     //do soemthing
 }
-*/
+
 
 
 
 ///////////////////////////////////////
 // Lecture: Arrays
-/*
+
 var names = ['John', 'Jane', 'Mark'];
 var years = new Array(1990, 1969, 1948);
 
@@ -271,13 +271,13 @@ console.log(john);
 if (john.indexOf('teacher') === -1) {
     console.log('John is NOT a teacher.');
 }
-*/
+
 
 
 
 ///////////////////////////////////////
 // Lecture: Objects
-/*
+
 var john = {
     name: 'John',
     lastName: 'Smith',
@@ -308,7 +308,7 @@ jane['job'] = 'retired';
 jane['isMarried'] = true;
 
 console.log(jane);
-*/
+
 
 
 
@@ -316,7 +316,7 @@ console.log(jane);
 // Lecture: Objects and methods
 
 // v1.0
-/*
+
 var john = {
     name: 'John',
     lastName: 'Smith',
@@ -365,7 +365,7 @@ var mike = {
 
 mike.calculateAge();
 console.log(mike);
-*/
+
 
 
 
@@ -411,7 +411,7 @@ while(i < names.length) {
 // break and continue
 for (var i = 1; i <= 5; i++) {
     console.log(i);
-    
+
     if (i === 3) {
         break;
     }
@@ -421,7 +421,7 @@ for (var i = 1; i <= 5; i++) {
     if (i === 3) {
         continue;
     }
-    
+
     console.log(i);
 }
 */
@@ -450,7 +450,7 @@ Hint: you can use a loop not only to read from an array, like y[i], but also to 
 function printFullAge(years) {
     var ages = [];
     var fullAges = [];
-    
+
     for (var i = 0; i < years.length; i++) {
         ages[i] = 2016 - years[i];
     }
@@ -464,7 +464,7 @@ function printFullAge(years) {
             fullAges.push(false);
         }
     }
-    
+
     return fullAges;
 }
 
@@ -535,7 +535,7 @@ if (quarter(12) % 3 === 0 ) {
 //function with 2 arguments
 
 var perimeterBox = function(length, width) {
-    return length + length + width + width; 
+    return length + length + width + width;
 };
 var  length, width = perimeterBox (4,2);
 console.log (length, width);
@@ -563,27 +563,24 @@ for (var i = vacationSpots.length -1; i >= 0; i--){
 
 ********for loop inside a for loop*********
 
-var myPlaces = ["nyc", "mainly", "iceland"]; 
+var myPlaces = ["nyc", "mainly", "iceland"];
 var friendPlaces = ["iceland", "france", "italy"];
 
 
 for (var i = 0; i < myPlaces.length; i++) {
- 
+
   //console.log(myPlaces[i]);
 
 for (var j = 0; j < friendPlaces.length; j++) { if (myPlaces[i] === friendPlaces[j]) {
   console.log("Match: " + myPlaces[i]);
 } else {
-  
+
 }
   //console.log(friendPlaces[j]);
-                                               
-} 
+
+}
 }
 
 
 
 */
-
-
-

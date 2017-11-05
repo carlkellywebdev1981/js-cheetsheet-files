@@ -1,25 +1,7 @@
-/*jshint esversion: 6 */
-
-let cities = ['Nashville', 'Charlotte', 'Asheville', 'Austin', 'Boulder'];
-
-let nums = [1, 50, 75, 200, 350, 525, 1000];
-
-//  Choose a method that will return undefined
-cities.forEach(city => console.log('Have you visited ' + city + '?'));
-
-// Choose a method that will return a new array
-let longCities = cities.filter(city => city.length > 7);
-
-// Choose a method that will return a new array
-let smallerNums = nums.map(num => num - 5);
-
-// Choose a method that will return a boolean value
-nums.every(num => num < 0);
-
-
 /*****************.REDUCE (callback function) **********************/
 
 //reduce() method applies a function against an accumulator and each element in the array (from left to right) to reduce //it to a single value.
+
 
 var numbers = [2,4,5,7,8,9];
 var sum = numbers.reduce(function(runningTotal, num) {
@@ -36,21 +18,6 @@ var sum = [0, 1, 2, 3].reduce(function (a, b) {
   return a + b;
 }, 0);
 // sum is 6
-
-
-function largestOfFour(arr) {
-  var newArr = arr.map(function(x){
-    return x.reduce(function(prev, current) {
-      return (current > prev) ? current : prev;
-    });
-
-  });
-   return newArr;
-}
-
-largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
-// returns [5,27,39,1001]
-
 
 
 /*****************FOREACH (callback function)**********************/
@@ -91,12 +58,12 @@ console.log(squares);
 var min = function(list){
    list.sort((a,b) => a > b ? 1 : -1);
     return list[0];
-};
+}
 
 var max = function(list){
    list.sort((a,b) => a > b ? -1 : 1);
     return list[0];
-};
+}
 
 min([-52, 56, 30, 29, -54, 0, -110]);
 max([-52, 56, 30, 29, -54, 0, -110]);
@@ -150,6 +117,46 @@ while(count <=333){
 }
 
 /*****************FUNCTIONS**********************/
+
+
+// TO THE POWER VARIATIONS
+
+// recursion
+
+function raiseToPower(num, exponent) {
+  //raise num to whatever power is passed in as exponent
+  //code here
+  if (exponent === 0) {
+  return 1;
+}
+return num * raiseToPower(num, exponent - 1);
+}
+
+console.log(raiseToPower(2,10));
+
+// my way
+
+const power = (num, counter) => {
+  for (let i = 1; i < counter; i++) {
+    num *= 2 // num = num * 2
+
+  }
+  console.log(num);
+}
+power(2,8);
+
+//eloquent js way
+
+var power = function(base, exponent) {
+  var result = 1;
+    for (var count = 0; count < exponent; count++)
+    result *= base;
+    return result;
+};
+
+console.log(power(2, 10));
+
+
 
 // Replace - with _ within a string
 
@@ -312,7 +319,7 @@ return 'At match ' + teams[0] + ' - ' + teams[1] + ', '  + teams[1] + ' won!';
 
 }
 
-uefaEuro2016(['Germany', 'Ukraine'], [2, 0]);
+(uefaEuro2016(['Germany', 'Ukraine'], [2, 0])
 
 /*****************FUNCTIONS + FOR LOOP**********************/
 
@@ -437,7 +444,7 @@ var languages = {
     spanish: 'Bienvenido',
     swedish: 'Valkommen',
     welsh: 'Croeso'
-};
+}
 function greet(language) {
     for(var key in languages){
         if(key === language){

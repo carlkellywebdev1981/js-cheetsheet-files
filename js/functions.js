@@ -175,7 +175,7 @@ function getGreeting(name) {
 }
 
 //If you can't remember these area formulas then head over to Google or look at the test code.
- 
+
 function getRectangleArea(length, width) {
   //return the area of the rectangle by using length and width
   //code here
@@ -204,6 +204,212 @@ function getRectangularPrismVolume(length, width, height) {
   return prismed;
 }
 
+function getBiggest(x, y) {
+  //x and y are integers.  Return the larger integer
+  //if they are the same return either one
+  if(x > y ) {
+    return x;
+  } else if (y > x) {
+    return y;
+  } else if(x === y){
+    return x;
+  }
+}
+
+function greeting(language) {
+  //return a greeting for three different languages:
+  //language: 'German' -> 'Guten Tag!'
+  //language: 'English' -> 'Hello!'
+  //language: 'Spanish' -> 'Hola!'
+  //if language is undefined return 'Hello!'
+
+  if (language === 'German') {
+    return 'Guten Tag!';
+  } else if(language === 'English') {
+    return 'Hello!';
+  } else if (language === 'Spanish') {
+    return 'Hola!';
+  } else {
+    return 'Hello!';
+      }
+}
+
+function isTenOrFive(num) {
+  //return true if num is 10 or 5
+  //otherwise return false
+  if (num === 5 || num === 10) {
+    return true;
+  } else {
+    return false;
+  }
+
+}
+
+function isInRange(num) {
+  //return true if num is less than 50 and greater than 20
+  if (num > 20 && num < 50) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function isInteger(num) {
+  //return true if num is an integer
+  //0.8 -> false
+  //1 -> true
+  //-10 -> true
+  //otherwise return false
+  //hint: you can solve this using Math.floor
+  //return num % 1 === 0;
+  if (Math.floor(num) || num === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function fizzBuzz(num) {
+  //if num is divisible by 3 return 'fizz'
+  //if num is divisible by 5 return 'buzz'
+  //if num is divisible by 3 & 5 return 'fizzbuzz'
+  //otherwise return num
+  if (num % 3 === 0 && num % 5 === 0) {
+    return 'fizzbuzz';
+  } else if (num % 5 === 0) {
+    return 'buzz';
+  } else if (num % 3 === 0) {
+    return 'fizz';
+  } else {
+    return num;
+  }
+
+  }
+
+
+function isPrime(num) {
+  //return true if num is prime.
+  //otherwise return false
+  //hint: a prime number is only evenly divisible by itself and 1
+  //hint2: you can solve this using a for loop
+  //note: 0 and 1 are NOT considered prime numbers
+
+  for (var i = 2; i < num; i++) {
+    if(num % i === 0) {
+      return false;
+    }
+  }
+  //outside of loop
+  return num > 1;
+}
+
+
+
+function returnFirst(arr) {
+  //return the first item from the array
+return arr[0];
+
+}
+
+function returnLast(arr) {
+  //return the last item of the array
+  return arr[arr.length -1];
+
+}
+
+function getArrayLength(arr) {
+  //return the length of the array
+  return arr.length;
+
+}
+
+function incrementByOne(arr) {
+  //arr is an array of integers
+  //increase each integer by one
+  //return the array
+  for (var i = 0; i < arr.length; i++) {
+    arr[i]++;
+  }
+return arr;
+}
+
+
+
+
+
+
+function addItemToArray(arr, item) {
+  //add the item to the end of the array
+  //return the array
+  arr.push(item);
+  return arr;
+
+}
+
+function addItemToFront(arr, item) {
+  //add the item to the front of the array
+  //return the array
+  //hint: use the array method .unshift
+  arr.unshift(item);
+  return arr;
+}
+
+function wordsToSentence(words) {
+  //words is an array of strings
+  //return a string that is all of the words concatenated together
+  //spaces need to be between each word
+  //example: ['Hello', 'world!'] -> 'Hello world!'
+  return words.join(' ');
+
+}
+
+function contains(arr, item) {
+  //check to see if item is inside of arr
+  //return true if it is, otherwise return false
+  if(arr.indexOf(item) === 0) {
+    return true;
+  } else {
+    return false;
+  }
+
+}
+
+
+function addNumbers(numbers) {
+  //numbers is an array of integers.
+  //add all of the integers and return the value
+  var total = 0;
+  for (var i = 0; i < numbers.length; i++) {
+    total = total + numbers[i];
+  }
+return total;
+}
+
+function averageTestScore(testScores) {
+  //testScores is an array.  Iterate over testScores and compute the average.
+  //return the average
+  var total = 0;
+  for(var i = 0; i < testScores.length; i++) {
+    total = total + testScores[i];
+  }
+var result  = total / testScores.length;
+return result;
+}
+
+function largestNumber(numbers) {
+  //numbers is an array of integers
+  //return the largest integer
+  var newNums = numbers.sort(function(x,y) {
+    if(x > y) {
+      return 1;
+    } else {
+      return -1;
+    }
+  });
+  return newNums[newNums.length -1];
+
+}
+
 //////////////////////// calculate age function /////////////////
 
 function calculateAge(yearOfBirth) {
@@ -217,7 +423,7 @@ calculateAge(1964);
 
 function personAge(yearOfBirth) {
   var age = 2017 - yearOfBirth;
-  
+
 if(age >= 16) {
   console.log("you can drive");
 } else {
